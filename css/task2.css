@@ -1,0 +1,183 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+html, body {
+	background-color: #DEDEDE;
+	font-family: Helvetica, Tahoma, Arial, STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
+	font-size: 16px;
+}
+article, aside {
+	background-color: #fff;
+	width: 90%;
+	box-shadow: 2px 2px 2px #828282;	
+	border: 1px solid #eee;
+}
+article {
+	margin: 25px auto;
+	padding: 15px;
+}
+article h2 {
+	margin: 40px 0 10px 0;
+}
+article h3 {
+	color: #828282;
+	margin-bottom: 10px;
+}
+article span {
+	color: #828282;
+	font-size: 14px;
+}
+article p {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-indent: 2em;
+}
+article ul {
+	margin-top: 1em;
+	margin-left: 2em;
+}
+article ul, article ul li {
+	list-style: none;
+}
+article dl dt {
+	margin-top: 15px;
+}
+article dl dt h3{
+	color: black;
+	font-weight: bold;
+	font-size: 1.5em;
+}
+article dd {
+	width: 120px;
+	margin-left: 3em;
+	border: 1px solid #eee;
+	height: 140px;
+	text-align: center;
+}
+article dd span {
+	display: inline-block;
+	padding: 8px 0;
+}
+
+article dd img {
+	width: 90px;
+	height: 90px;
+}
+
+article ol {
+	margin-left: 2em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	font-weight: bold;
+}
+article table {
+	width: 100%;
+	text-align: left;
+}
+article table caption {
+	text-align: left;
+}
+article table {
+	border-collapse: collapse;
+	border: solid #eee;
+	border-width: 1px 0px 0px 1px;
+}
+article table tr td, article table tr th{
+	border: solid #eee;
+	border-width: 0px 1px 1px 0px;
+}
+article table tr:last-child {
+	background-color: #eee;
+	font-weight: bold;
+}
+article table tr th {
+	font-weight: bold;
+	color: #fff;
+	background-color: #333;
+}
+aside {
+	margin: 35px auto;
+	margin-top: 50px;
+	padding: 15px;
+}
+aside h3 {
+	border-left-width: 3px;
+	padding-left: 10px;
+	height: 45px;
+	line-height: 45px;
+	border-left-color: #DEDEDE;
+	border-left-style: solid;
+}
+aside form {
+	margin-left: 25%;
+	padding-bottom: 35px;
+}
+aside form label {
+	font-weight: bold;
+}
+aside form div p {
+	color: #777;
+	font-size: 13px;
+	margin-top: 5px;
+}
+.kg {
+	padding: 5px 0;
+	margin-top: 0;	
+}
+aside form div:nth-child(1) {
+	margin: 25px 0 15px 0;
+}
+aside form div input {
+	color: black;
+	margin-left: 5px;
+}
+aside form div p {
+	margin-left: 9.5em;
+}
+aside form div:nth-child(2) label:first-child {
+	margin-left: 2em;
+}
+aside form div:nth-child(3) {
+	margin-top: 15px;
+}
+aside form div:nth-child(3) span {
+	margin-left: 5em;
+	font-weight: bold;
+	margin-right: 5px;
+}
+aside form div:nth-child(3) span.grms {
+	margin-left: 3em;
+}
+aside form div:nth-child(3) textarea {
+	color: black;
+	position: absolute;
+	top: 0;
+	left: auto;
+	width: 80%;
+	height: 50px;
+}
+aside .ms {
+	position: relative;
+	height: auto;
+	margin-bottom: 15px;
+}
+#submit {
+	display: block;
+	width: 100%;
+	/*margin-top: 35px;*/
+	background-color: #3355D0;
+	box-shadow: 0 0 3px #000;
+	border-radius: 5px;
+	line-height: 35px;
+	color: #fff;
+	text-align: center;
+}
+footer {
+	height: 50px;
+	background: black;
+	text-align: center;
+	color: #fff;
+	font-size: 12px;
+	line-height: 45px;
+}
