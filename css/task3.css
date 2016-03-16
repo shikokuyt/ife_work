@@ -12,6 +12,7 @@ body {
 	background-color: #eee;
 	border: 1px solid #999;
 	overflow: hidden;
+	zoom: 1;
 }
 .parent div {
 	background-color: #fff;
