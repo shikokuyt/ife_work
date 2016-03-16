@@ -87,7 +87,7 @@ article table tr td, article table tr th{
 	border: solid #eee;
 	border-width: 0px 1px 1px 0px;
 }
-article table tr:last-child {
+article table tr.last {
 	background-color: #eee;
 	font-weight: bold;
 }
@@ -125,7 +125,7 @@ aside form div p {
 	padding: 5px 0;
 	margin-top: 0;	
 }
-aside form div:nth-child(1) {
+aside form div.first {
 	margin: 25px 0 15px 0;
 }
 aside form div input {
@@ -135,21 +135,21 @@ aside form div input {
 aside form div p {
 	margin-left: 9.5em;
 }
-aside form div:nth-child(2) label:first-child {
+aside form div.second label.one {
 	margin-left: 2em;
 }
-aside form div:nth-child(3) {
+aside form div.third {
 	margin-top: 15px;
 }
-aside form div:nth-child(3) span {
+aside form div.third span {
 	margin-left: 5em;
 	font-weight: bold;
 	margin-right: 5px;
 }
-aside form div:nth-child(3) span.grms {
+aside form div.third span.grms {
 	margin-left: 3em;
 }
-aside form div:nth-child(3) textarea {
+aside form div.third textarea {
 	color: black;
 	position: absolute;
 	top: 0;

@@ -1,0 +1,65 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+body {
+	padding: 20px;
+	font-family: Helvetica, Tahoma, Arial, STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
+	font-size: 16px;
+}
+.parent {
+	padding: 20px;
+	background-color: #eee;
+	border: 1px solid #999;
+	overflow: hidden;
+}
+.parent div {
+	background-color: #fff;
+	border: 1px solid #999;
+	padding: 20px;
+}
+.parent div img {
+	width: 80px;
+	height: 80px;
+	border: 1px solid #999;
+}
+.mb20 {
+	margin-bottom: 20px;
+}
+.parent .left {
+	float: left;
+	width: 160px;
+	_margin-right:-3px;
+}
+.left img {
+	float: left;
+	margin-right: 20px;
+}
+.left span {
+	text-align: center;
+	font-weight: bold;
+	float: left;
+	width: 58px;
+	font-size: 14px;
+}
+.parent .center {
+	float: none;
+	margin-left: 222px;
+	margin-right: 142px; 
+}
+.center p {
+	margin-top: 20px;
+	text-indent: 2em;
+} 
+.parent .right {
+	font-size: 0; /*去除img间隙*/
+	/*
+	或者
+	img {verticle-align: top;display: block;}
+	*/
+	width: 80px;
+	float: right;
+	text-align: center;
+	_margin_left: -3px;
+}
+
