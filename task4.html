@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>任务四</title>
+	<link rel="stylesheet" href="css/task4.css">
+</head>
+<body>
+<!--
+    //1. 响应内容动态变化， 目前较为好的一种，但需要支持css3
+div {
+	position: relative;
+	left: 50%; // 相对屏幕左边缘距离半个屏幕的宽度
+	top: 50%; // 相对屏幕顶点距离半个屏幕的长度
+	transform: translate(-50%, -50%); // 移动该元素，向左向上移动元素的50%
+}
+
+// 2. 较为古老的方法, 和法一其实是一样的，不过兼容性更好
+div {
+	margin: 0 auto; // 水平居中
+	display: block;
+	left: 50%;
+	top: 50%;
+	margin-top: -50%; // 元素宽度
+	margin-left: -50%; // 元素长度
+}
+
+// 3. Flex盒模型,作用在父容器上, 但兼容不好
+div.parent {
+	display: flex;
+	justify-content: center; // 实现水平居中
+	align-items: center; // 实现垂直居中
+}
+
+// 4. 古老的box-flex模型
+div.parent {
+	display: -moz-box; 
+    display: -webkit-box; 
+    display: box;
+	-moz-box-align: center;
+	-webkit-box-align: center;
+	box-align: center;
+	-moz-box-pack: center;
+	-webkit-box-pack: center;
+	box-pack: center;
+}
+-->
+	<div class="center">
+		<div class="lt"></div>
+		<div class="rb"></div>
+	</div>
+</body>
+</html>
