@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>任务五</title>
+    <link rel="stylesheet" href="css/task5.css">
+</head>
+<body>
+    <!-- 头部 -->
+    <header>
+        <div class="nav">
+            <a href="#" class="logo">
+                <img src="images/bd_logo.png" height="50" alt="BD_LOGO">
+            </a>
+            <ul class="navList">
+                <li><a href="#">导航链接1</a></li>
+                <li><a href="#">导航链接2</a></li>
+                <li><a href="#">导航链接3</a></li>
+                <li class="active"><a href="#">导航链接4</a></li>
+            </ul>
+        </div>
+    </header>
+    <!-- 主体 -->
+    <div class="main">
+        <aside>
+            <form>
+                <fieldset>
+                    <legend>这里以后是一个侧栏，这是侧栏的标题</legend>
+                    <p>
+                        <label for="Email">请输入邮箱地址</label>
+                        <input type="text" id="Email" value="这是一个文本输入框">
+                    </p>
+                    <div>
+                        邮箱地址请按要求格式输入
+                    </div>
+                    <p>
+                        <label for="pwd1">请输入密码</label>
+                        <input type="password" id="pwd1" value="maczyt">
+                    </p>
+                    <p>
+                        <label for="pwd2">请重复输入密码</label>
+                        <input type="password" id="pwd2" value="maczyt">
+                    </p>
+                    <div>
+                        密码请为6-16位英文数字
+                    </div>
+                    <p>
+                        <label>性别</label>
+                        <input type="radio" name="sex" checked>男
+                        <input type="radio" name="sex" style="margin-left: 3px;">女
+                    </p>
+                    <p>
+                        <label>城市</label>
+                        <select name="place">
+                            <option value="1">杭州</option>
+                            <option value="2">北京</option>
+                            <option value="3">上海</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label>爱好</label>
+                        <input type="checkbox" name="hobby">运动
+                        <input type="checkbox" name="hobby" style="margin-left: 3px;">艺术
+                        <input type="checkbox" name="hobby" style="margin-left: 3px;">科学
+                    </p>
+                    <p>
+                        <label>个人描述</label>
+                        <textarea>这是一个多行输入框，输入您的个人描述</textarea>
+                    </p>
+                    <a href="#" id="submit">确认提交</a>
+                </fieldset>
+            </form>
+        </aside>
+        <div class="article">
+            <article class="title1">                       <h1>文章一级标题</h1>
+                <h2>文章二级标题</h2>
+                <span>文章作者</span>
+                <time>文章发表时间</time>
+                <p>百度前端技术学院的课程任务是由百度前端工程师专为对前端不同掌握程度的同学设计。我们尽力保证课程内容的质量以及学习难度的合理性，但即使如此，真正决定课程效果的，<a href="http://zhouyutao.com">这里有一个链接</a>还是你的每一次思考和实践。换行了. <br>课程多数题目的解决方案都不是唯一的，这和我们在实际工作中的情况也是一致的。换行了. <br>因此，我们的要求不仅仅是实现设计稿的效果，更是要多去思考不同的解决方案，评估不同方案的优劣，然后使用在该场景下最优雅的方式去实现。</p>
+                <img src="images/mayj.jpg" alt="插图一">
+                <p>百度前端技术学院的课程任务是由百度前端工程师专为对前端不同掌握程度的同学设计。我们尽力保证课程内容的质量以及学习难度的合理性，但即使如此，真正决定课程效果的，<a href="http://zhouyutao.com">这里有一个链接</a>还是你的每一次思考和实践。换行了. <br>课程多数题目的解决方案都不是唯一的，这和我们在实际工作中的情况也是一致的。换行了. <br>因此，我们的要求不仅仅是实现设计稿的效果，更是要多去思考不同的解决方案，评估不同方案的优劣，然后使用在该场景下最优雅的方式去实现。</p>
+            </article>
+            <article class="title2">                       <h1>另一篇文章一级标题</h1>
+                <h2>文章二级标题</h2>
+                <span>文章作者</span>
+                <time>文章发表时间</time>
+                <p>百度前端技术学院的课程任务是由百度前端工程师专为对前端不同掌握程度的同学设计。我们尽力保证课程内容的质量以及学习难度的合理性，但即使如此，真正决定课程效果的，<a href="http://zhouyutao.com">这里有一个链接</a>还是你的每一次思考和实践。换行了. <br>课程多数题目的解决方案都不是唯一的，这和我们在实际工作中的情况也是一致的。换行了. <br>因此，我们的要求不仅仅是实现设计稿的效果，更是要多去思考不同的解决方案，评估不同方案的优劣，然后使用在该场景下最优雅的方式去实现。</p>
+                <img src="images/mayj.jpg" alt="插图一">
+                <ul>
+                    <li>列表项目1</li>
+                    <li>列表项目2</li>
+                    <li>列表项目3</li>
+                </ul>
+            </article>
+            
+            <article class="img">
+                <h1>图片</h1>
+                <ul class="imgList">
+                    <li>                                           <figure>
+                            <figcaption>好看的图片</figcaption>
+                            <img src="images/listImg.jpg" alt="May J Lee">
+                        </figure>
+                    </li>
+                    <li>                                           <figure>
+                            <figcaption>好看的图片</figcaption>
+                            <img src="images/listImg.jpg" alt="May J Lee">
+                        </figure>
+                    </li>
+                    <li>                                           <figure>
+                            <figcaption>好看的图片</figcaption>
+                            <img src="images/listImg.jpg" alt="May J Lee">
+                        </figure>
+                    </li>
+                    <li>                                           <figure>
+                            <figcaption>好看的图片</figcaption>
+                            <img src="images/listImg.jpg" alt="May J Lee">
+                        </figure>
+                    </li>
+                    <li>                                           <figure>
+                            <figcaption>好看的图片</figcaption>
+                            <img src="images/listImg.jpg" alt="May J Lee">
+                        </figure>
+                    </li>
+                    <li>                                           <figure>
+                            <figcaption>好看的图片</figcaption>
+                            <img src="images/listImg.jpg" alt="May J Lee">
+                        </figure>
+                    </li>
+                    <li>                                           <figure>
+                            <figcaption>好看的图片</figcaption>
+                            <img src="images/listImg.jpg" alt="May J Lee">
+                        </figure>
+                    </li>
+                    <li>                                           <figure>
+                            <figcaption>好看的图片</figcaption>
+                            <img src="images/listImg.jpg" alt="May J Lee">
+                        </figure>
+                    </li>
+                    <li>                                           <figure>
+                            <figcaption>好看的图片</figcaption>
+                            <img src="images/listImg.jpg" alt="May J Lee">
+                        </figure>
+                    </li>
+                    <li>                                           <figure>
+                            <figcaption>好看的图片</figcaption>
+                            <img src="images/listImg.jpg" alt="May J Lee">
+                        </figure>
+                    </li>
+                </ul>
+            </article>
+            <article class="title3">                       <h1>最后一篇文章一级标题</h1>
+                <h2>文章二级标题</h2>
+                <span>文章作者</span>
+                <time>文章发表时间</time>
+                <ol>
+                    <li>排名1</li>
+                    <li>排名2</li>
+                    <li>排名3</li>
+                </ol>
+                <table>
+                   <caption>
+                       下面是一个表格，么么哒
+                   </caption>
+                    <tr>
+                        <th>表头</th>
+                        <th>表头</th>
+                        <th>表头</th>
+                    </tr>
+                    <tr>
+                        <td>表内容单元格</td>
+                        <td>表内容单元格</td>
+                        <td><a href="#">操作</a></td>
+                    </tr>
+                    <tr>
+                        <td>表内容单元格</td>
+                        <td>表内容单元格</td>
+                        <td><a href="#">操作</a></td>
+                    </tr>
+                    <tr>
+                        <td>表内容单元格</td>
+                        <td>表内容单元格</td>
+                        <td><a href="#">操作</a></td>
+                    </tr>
+                    <tr style="background: #ccc;">
+                        <td>总计</td>
+                        <td colspan="2">1000</td>
+                    </tr>
+                </table>
+            </article>
+            
+        </div>
+    </div>
+    <!-- 尾部 -->
+    <footer>
+        版权所有&copy;
+    </footer>
+</body>
+</html>

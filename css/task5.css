@@ -1,0 +1,215 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+}
+html, body {
+    font-size: 16px;
+    background-color: #DEDEDE;
+/*    min-width: 700px;*/
+    font-family: Helvetica, Tahoma, Arial, STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
+}
+header {
+    width: 100%;
+/*    height: 50px;*/
+    background-color: #333;
+}
+header .nav {
+    margin-left: 20px;
+    margin-right: 20px;
+    line-height: 30px;
+}
+header .nav .navList {
+    float: right;
+/*    height: 50px;*/
+    line-height: 50px;
+}
+header:after {
+    content: '';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+header .nav .navList li {
+    float: left;
+    font-weight: bold;
+    margin-right: 25px;
+}
+header .nav .navList li.active a {
+    color: #A7A7A7;
+}
+footer {
+    width: 100%;
+    height: 65px;
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+    font-size: 13px;
+    text-align: center;
+    line-height: 50px;
+}
+.main {
+    width: 100%;
+    overflow: hidden;
+    _zoom: 1;
+}
+.main aside {
+    z-index: 1000;
+    position: relative;
+    margin-right: 20px;
+    margin-top: 20px;
+    background-color: #fff;
+    box-shadow: 1px 1px 3px #333;
+    padding: 20px;
+}
+.main .article {
+    margin-top: 20px;
+    margin-right: 400px;
+    margin-left: 20px;
+}
+.main .article article {
+    padding: 20px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    box-shadow: 1px 1px 3px #333;
+}
+.main .article article h1 {
+    margin-bottom: 10px;
+    font-size: 1.6em;
+}
+.main .article article h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #a7a7a7;
+}
+.main .article article span, .main .article article time {
+    color: #a7a7a7;
+    font-size: 0.8em;
+}
+.main .article article p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-indent: 2em;
+}
+.main .article article a {
+    color: #1400DD;
+    text-decoration: underline;
+}
+.main .article .title2 ul {
+    list-style: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 2em;
+}
+.main .article .title2 li {
+    margin-bottom: 5px;
+}
+.main .article .img {
+    overflow: hidden;
+    _zoom: 1;
+}
+.main .article .img ul {
+    list-style: none;
+    margin-left: 2em;
+    margin-right: 5em;
+}
+.main .article .img li {
+    border: 1px solid #ccc;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    float: left;
+    padding: 5px;
+    text-align: center;  
+}
+.main .article .img li img {
+    width: 100px;
+    height: 80px;
+    
+} 
+.main .article .title3 ol {
+    margin-left: 2em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.main .article table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.main .article table th {
+    background-color: #333;
+    color: #fff;
+    padding-left: 4px;
+}
+.main .article table td {
+    padding-left: 4px;
+}
+.main .article caption {
+    text-align: left;
+    font-weight: bold;
+}
+.main .article table, .main .article td, .main .article th {
+    border: 1px solid #ccc;
+    text-align: left;
+}
+.main aside {
+    width: 320px;
+    float: right;
+    padding: 20px;
+    font-size: 0.8em;;
+}
+.main aside form, .main aside form fieldset {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+.main aside form legend {
+    border-left-color: #CDCDCD;
+    border-left-style: solid;
+    font-size: 1.3em;
+    font-weight: bold;
+    padding-left: 10px;
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 20px;
+}
+.main aside form p {
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+.main aside form div {
+    margin-top: 10px;
+    margin-bottom: 25px;
+    margin-left: 36.00%;
+    color: #979CA0;
+}
+.main aside form p label {
+    display: inline-block;
+    width: 30%;
+    text-align: right;
+    margin-right: 10px;
+}
+.main aside form textarea {
+    width: 60%;
+    display: inline-block;
+    vertical-align: text-top;
+    height: 100px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+#submit {
+    display: block;
+    line-height: 40px;
+    font-size: 1.6em;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 8px;
+    background-color: #3355D0;
+    width: 100%;
+}
+
