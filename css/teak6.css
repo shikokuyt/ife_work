@@ -248,8 +248,50 @@ section {
 }
 .content .right-content {
     height: 100%;
-    background: blue;
     width: 459px;
+}
+.content .right-content figure {
+    position: relative;
+    width: 458px;
+    height: 275px;
+    background-image: url(../images/tu3.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+.content .right-content figure figcaption {
+    position: absolute;
+    box-sizing: border-box;
+    width: 458px;
+    height: 61px;
+    background: rgba(04, 00, 00, 0.4);
+    bottom: 0;
+    left: 0;
+    padding-left: 40px;
+    display: flex;
+    align-items: center;
+    font-family: '微软雅黑';
+}
+.content .right-content figure h2 {
+    border-left: 3px solid #72b13a;
+    height: 44px;
+    font-size: 26px;
+    line-height: 44px;
+    color: #fff;
+    padding-left: 10px;
+}
+.content .right-content figure h2 span {
+    color: #72b13a;
+    font-style: oblique;
+    font-size: 12px;
+    margin-left: 5px;
+    line-height: 20px;
+    letter-spacing: 140%;
+}
+.content .right-content .mulu {
+    width: 459px;
+    height: 318px;
+/*    background: blue;*/
+    margin-top: 25px;
 }
 .content:after {
     content: '';
