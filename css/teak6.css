@@ -111,7 +111,6 @@ section {
 }
 
 .main .nav {
-    background: red;
     width: 641px;
     height: 301px;
     position: relative;
@@ -278,6 +277,8 @@ section {
     line-height: 44px;
     color: #fff;
     padding-left: 10px;
+    position: relative;
+    width: 100%;
 }
 .content .right-content figure h2 span {
     color: #72b13a;
@@ -285,13 +286,110 @@ section {
     font-size: 12px;
     margin-left: 5px;
     line-height: 20px;
-    letter-spacing: 140%;
+    left: 120px;
+    top: 20px;
+    position: absolute;
+    letter-spacing: 1.4em;
 }
 .content .right-content .mulu {
     width: 459px;
     height: 318px;
-/*    background: blue;*/
+    background: #EEEED6;
     margin-top: 25px;
+    position: relative;
+    padding-top: 30px;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+.content .right-content .mulu ul {
+    margin-left: 30px;
+}
+.content .right-content .mulu ul li{ 
+    margin-bottom: 25px;
+    padding-left: 15px;
+    background-image: url(../images/sanjiao.png);
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    text-align: left;
+    color: #5a5b5b;
+    font: 16px;
+    font-family: '宋体';
+}
+.content .right-content .mulu ul li span{
+    text-align: right;
+    font-size: 12px;
+    font-style: oblique;
+}
+.content .right-content .mulu .hwleft {
+    width: 260px;
+    height: 160px;
+    background: #d45d5c;
+    float: left;
+    padding: 0 10px;
+    box-sizing: border-box;
+    color: #fff;
+    position: relative;
+}
+.content .right-content .mulu .hwright {
+    margin-left: 275px;
+    color: #5a5b5b;
+    font-family: '黑体';
+    font-style: oblique;
+    word-spacing: 16px;
+    position: relative;
+    font-size: 14px;
+    text-indent: 3em;
+    top: 10px;
+}
+.content .right-content .mulu .hwleft span {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 86px;
+    line-height: 86px;
+    font-size: 110px;
+    padding-right: 5px;
+    border-right: 2px solid;
+    font-family: '微软雅黑';
+}
+.content .right-content .mulu .hwleft .big {
+    font-size: 21px;
+    font-family: '黑体';
+    position: absolute;
+    font-style: oblique;
+    line-height: 43px;
+    left: 90px;
+    top: 30px;
+    align-self: flex-start;
+}
+.content .right-content .mulu .hwleft .small {
+    position: absolute;
+    left: 90px;
+    font-family: '黑体';
+    top: 85px;
+    font-size: 12px;
+    line-height: 16px;
+}
+.content .right-content .mulu .hwright:before {
+    content: open-quote;
+    font-size: 72px;
+    color: #d45d5c;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: -90px;
+    top: -15px;
+}
+.content .right-content .mulu .hwright:after {
+    content: close-quote;
+    font-size: 72px;
+    color: #d45d5c;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 70px;
+    bottom: -15px;
 }
 .content:after {
     content: '';
