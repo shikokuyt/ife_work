@@ -45,7 +45,7 @@ div.row {
 }
 
 /* when screen's width > 768px */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
     @for $i from 1 to 13 {
         .col-md-#{$i} {
             width: $i * $minW;
