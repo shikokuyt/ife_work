@@ -25,13 +25,7 @@ function getData() {
  */
 function sortAqiData(data) {
     data.sort(function (value1, value2) {
-        if (value1[1] - value2[1] > 0) {
-            return 1;
-        } else if (value1[1] - value2[1] < 0){
-            return -1;         
-        } else {
-            return 0;
-        }
+        return value1[1] - value2[1];
     });
     return data;
 }
