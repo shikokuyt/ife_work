@@ -1,0 +1,14 @@
+#result {
+  display: flex;
+  align-items: flex-end;
+  width: 850px;
+  margin-top: 15px; }
+  #result div {
+    flex-grow: 1;
+    background-color: red;
+    margin-right: 3px;
+    transition: all 3s ease;
+    text-align: center;
+    color: aliceblue; }
+
+/*# sourceMappingURL=task7.css.map */
