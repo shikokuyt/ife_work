@@ -34,22 +34,22 @@ var validator = {
     // 所有可用的检查
     // 可以自行添加/删除
     types: {},
-    
+
     // 在当前验证会话中的错误信息
     messages: [],
-    
+
     // 当前验证配置
     // 名称: 验证类型
     config: {},
-    
+
     // 接口方法
     // 'data'为键-值对
     validate: function (data) {
         var i, j, len, msg, type, checker, result_ok;
-        
+
         // 重置所有消息
         this.messages = [];
-        
+
         for (i in data) {
             if (data.hasOwnProperty(i)) {
                 type = this.config[i];
@@ -75,12 +75,12 @@ var validator = {
         }
         return this.hasErrors();
     },
-    
+
     // 帮助程序
     hasErrors: function () {
         return this.messages.length !== 0;
     }
-} 
+}
 
 /**
  * Dom渲染函数
@@ -123,7 +123,7 @@ var sorts = {
             var index = this.partition(data, left, right);
             if (left < index - 1) {
                 arguments.callee.call(this, data, left, index - 1);
-            } 
+            }
             if (index < right) {
                 arguments.callee.call(this, data, index, right);
             }
