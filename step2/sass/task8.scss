@@ -1,0 +1,17 @@
+#result {
+  margin-top: 15px;
+  div {
+    display: inline-block;
+    padding: 10px 15px 15px 15px;
+    background: #f00;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 3px;
+    color: #fff;
+    transition: all ease 1.2s;
+    &.search {
+      background-color: cadetblue;
+    }
+  }
+}

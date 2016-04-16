@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IFE JavaScript Task 08</title>
+  <link rel="stylesheet" href="css/task8.css">
+  <script src="js/task8.js"></script>
+</head>
+<body>
+<textarea id="txt" cols="30" rows="10"></textarea>
+<button id="left-in">左侧入</button>
+<button id="right-in">右侧入</button>
+<button id="left-out">左侧出</button>
+<button id="right-out">右侧出</button>
+<input type="text" id="search">
+<button id="searchBtn">查询</button>
+<div id="result"></div>
+<script>
+  render();
+  $('#left-in').onclick = deal([].unshift, null, getInputValue);
+  $('#right-in').onclick = deal([].push, null, getInputValue);
+  $('#left-out').onclick = deal([].shift, window.alert);
+  $('#right-out').onclick = deal([].pop, window.alert);
+  $('#searchBtn').onclick = function () {
+    for (var i=0, len=$$('#result div').length; i<len; i+=1) {
+      $$('#result div')[i].className = '';
+    }
+    search();
+  };
+</script>
+</body>
+</html>
