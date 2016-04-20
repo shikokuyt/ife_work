@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/task9.css">
+</head>
+<body>
+<div class="tag">
+  <label for="addTag">Tag: </label>
+  <input type="text" id="addTag">
+  <div id="tagResult"></div>
+</div>
+<div class="hoppy">
+  <textarea id="txt" cols="30" rows="7"></textarea>
+  <br>
+  <button id="btn">确认兴趣爱好</button>
+  <div id="hyResult"></div>
+</div>
+<script src="js/task9.js"></script>
+<script>
+  var addTag = $('#addTag'),
+      tagResult = $('#tagResult'),
+      add = [13, 32, 44];
+  render($('#tagResult'), tagData);
+    addTag.addEventListener('keypress', function (event) {
+        event = event || window.event;
+        if (in_array(event.keyCode, add)) {
+          var val = getTagValue();
+          if (val.length !== 0 && !in_array(val, tagData)) {
+            if (isOverflow(tagData, 10)) {
+              __shift.call(tagData);
+            }
+            __push.call(tagData, val);
+          }
+          console.log(tagData);
+          render($('#tagResult'), tagData);
+          $('#addTag').value = '';
+        }
+    }, false);
+    tagResult.addEventListener('mouseover', function (event) {
+        var target = event.target || event.srcElement;
+        if (target.id != 'tagResult') {
+          target.className = 'remove';
+          target.innerHTML = '删除'+target.innerHTML;
+        }
+    });
+    tagResult.addEventListener('mouseout', function (event) {
+        var target = event.target || event.srcElement;
+        if (target.id != 'tagResult') {
+          target.className = '';
+          target.innerHTML = target.innerHTML.substr(2);
+        }
+    });
+    tagResult.addEventListener('click', function (event) {
+        var target = event.target || event.srcElement;
+        if (target.id != 'tagResult') {
+          var val = target.innerHTML.substr(2);
+          console.log(val, __indexOf.call(tagData, val));
+        }
+    });
+
+</script>
+</body>
+</html>

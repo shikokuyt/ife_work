@@ -1,0 +1,27 @@
+.tag {
+  margin-bottom: 75px;
+}
+#tagResult {
+  display: flex;
+  div {
+    margin: 3px;
+    background-color: #88CAFF;
+    padding: 10px;
+    color: #fff;
+    &.remove {
+      background-color: #f00;
+    }
+  }
+}
+#hyResult {
+  display: flex;
+  div {
+    margin: 3px;
+    padding: 10px;
+    background-color: #F5CE8D;
+    color: #fff;
+    &.remove {
+      background-color: #f00;
+    }
+  }
+}

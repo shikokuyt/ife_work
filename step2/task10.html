@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IFE JavaScript Task 10</title>
+  <script src="js/task10.js"></script>
+  <style>
+    #par {
+      width: 500px;
+      height: 80px;
+    }
+    div {
+      border: 1px solid black;
+      display: flex;
+      flex-grow: 1;
+      justify-content: center;
+      margin: 10px;
+      background: #fff;
+    }
+    .active {
+      background: blue;
+    }
+  </style>
+</head>
+<body>
+  <button id="preSort">前序</button>
+  <button id="centerSort">中序</button>
+  <button id="nextSort">后序</button>
+  <div id="par">1
+    <div>2
+      <div>4
+        <div>8</div>
+        <div>9</div>
+      </div>
+      <div>5
+        <div>10</div>
+        <div>11</div>
+      </div>
+    </div>
+    <div>3
+      <div>6
+        <div>12</div>
+        <div>13</div>
+      </div>
+      <div>7
+        <div>14</div>
+        <div>15</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
