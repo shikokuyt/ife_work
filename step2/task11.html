@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>多叉树</title>
+    <style>
+        #par {
+            height: 80px;
+        }
+        div {
+            border: 1px solid black;
+            display: flex;
+            justify-content: space-between;
+            margin:6px;
+            flex-grow: 1;
+            background: #fff;
+        }
+        div.active {
+            background: blue;
+        }
+        div.green {
+            background: green;
+        }
+    </style>
+</head>
+<body>
+    <div id="par">
+        super
+        <div>
+            car
+            <div>
+                apple
+                <div>pig</div>
+                <div>dog</div>
+                <div>ife</div>
+                <div>Good</div>
+            </div>
+            <div>Phone</div>
+            <div>student
+                <div>
+                    book
+                </div>
+                <div>school</div>
+            </div>
+        </div>
+        <div>
+            Note
+            <div>
+                Human
+                <div>code</div>
+                <div>code2</div>
+                <div>code3</div>
+            </div>
+            <div>
+                program
+                <div>
+                    element
+                    <div>cat</div>
+                </div>
+                <div>glass</div>
+            </div>
+        </div>
+        <div>flash</div>
+    </div>
+    <button id="prev">先序遍历</button>
+    <input type="text" id="txt">
+    <button id="search">先序遍历搜索</button>
+    <script>
+        function traverse(process, node) {
+            function inOrder(node) {
+                process.call(null, node);
+                if (hasChild(node)) {
+                    var result = getElements(node),
+                        i, len=result.length;
+                    for (i=0; i<len; i+=1) {
+                        inOrder(result[i]);
+                    }
+                }
+            }
+            inOrder(node);
+        }
+        function hasChild(node) {
+            var childs = node.children,
+                i, len = childs.length;
+            for (i=0; i<len; i+=1) {
+                if (childs[i].nodeType === 1) {
+                    return true;
+                }
+            }
+            return false;
+        }
+        function getElements(node) {
+            var result = [],
+                childs = node.children,
+                i, len = childs.length;
+            for (i=0; i<len; i+=1) {
+                if (childs[i].nodeType === 1) {
+                    result.push(childs[i]);
+                }
+            }
+            return result;
+        }
+        function trim(str) {
+            return /\w+/.exec(str)[0];
+        }
+        function render(queue, value) {
+            var flag = (typeof value === 'undefined' || value.length===0)?true:false;
+            var found = 0;
+            var num = 0;
+            function inQueue(i) {
+                var timer = setTimeout(function () {
+                    if (i > 0) {
+                        queue[i-1].className = '';
+                    }
+                    if (i === queue.length) {
+                        return ;
+                    }
+                    queue[i].className = 'active';
+                    if (!flag && trim(queue[i].firstChild.nodeValue).toLowerCase() === value.toLowerCase()) {
+                        queue[i].className = 'green';
+                        return ;
+                    }
+                    timer = null;
+                    found ++;
+                    if (found === queue.length+1 && typeof value !== 'undefined') {
+                        alert('找不到');
+                    }
+                    inQueue(num ++);
+                }, 1000);
+            }
+            if (flag && typeof value !== 'undefined') {
+                alert('找不到所输入的点!');
+                return ; 
+            }
+            inQueue(num);
+        }
+        var prev = document.getElementById('prev'),
+            par = document.getElementById('par'),
+            txt = document.getElementById('txt'),
+            search = document.getElementById('search');
+        prev.onclick = function () {
+            var result = [];
+            traverse(function (node) {
+                result.push(node);
+            }, par);
+            console.log(result);
+            render(result);
+        }
+        search.onclick = function () {
+            var divs = par.getElementsByTagName('div'),
+                i, len = divs.length;
+            for (i=0; i<len; i+=1) {
+                divs[i].className = '';
+            }
+            var result = [];
+            traverse(function (node) {
+                result.push(node);
+            }, par);
+            render(result, txt.value);
+        }
+    </script>
+</body>
+</html>
