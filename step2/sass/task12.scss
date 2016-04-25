@@ -1,0 +1,67 @@
+html, body {
+    font-family: 'Microsoft YaHei', sans-serif, arial;
+}
+ul, li, h1 {
+    margin: 0;
+    padding: 0;
+}
+ul, li {
+    list-style: none;
+}
+.scene, .control {
+    margin: 0 auto;
+    float: left;
+}
+.scene {
+    width: 800px;
+    height: 580px;
+    background: #000;
+    position: relative;
+    margin-bottom: 35px;
+    border: 1px solid #666;
+    .aside {
+        float: left;
+        width: 200px;
+        background: #fff;
+        height: 100%;
+        overflow: auto;
+        h1 {
+            font-size: 18px;
+            text-align: center;
+            box-shadow: 0 1px 2px cadetblue;
+        }
+        ul {
+            width: 100%;
+            padding-left: 15px;
+            box-sizing: border-box;
+            li {
+                margin: 3px 0;
+            }
+        }
+    }
+    .center {
+        width: 150px;
+        height: 150px;
+        background-color: cadetblue;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(25px, -50%);
+        border-radius: 50%;
+    }
+}
+.control {
+    display: table;
+    margin-left: 15px;
+    li {
+        text-align: center;
+        margin: 10px;
+    }
+    border: 2px solid #666;
+    box-shadow: 0 0 3px #000;
+    box-sizing: border-box;
+}
+#new-fly {
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
