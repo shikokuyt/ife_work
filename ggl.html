@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>刮刮乐</title>
+	<style>
+		* { padding: 0; margin: 0;}
+		body { display: flex; flex-direction: column; justify-content: center; align-items: center;}
+		h1 { 
+			padding: 20px 150px; 
+			border-radius: 10px; 
+			margin: 10px; 
+			position: relative; 
+			background-color: #eee;
+			box-shadow: 0px 1px 4px rgba(0, 0, 0, .3), 0px 0px 20px rgba(0, 0, 0, .1) inset;
+		}
+		h1::before, h1::after {
+			content: '';
+			position: absolute;
+			z-index: -1;
+			bottom: 15px;
+			left: 10px;
+			width: 50%;
+			height: 20%;
+			box-shadow: 0 15px 10px rgba(0, 0, 0, .7);
+			transform: rotate(-3deg);
+		}
+		h1::after {
+			right: 10px;
+			left: auto;
+			transform: rotate(3deg);
+		}
+		#canvas {
+			background: url('./img/ggl.jpg') no-repeat center;
+			background-size: 500px 350px;
+		}
+		a {
+			cursor: pointer;
+			margin: 10px;
+			padding: 6px 25px;
+			border-radius: 5px;
+			color: #fff;
+			font-weight: bold;
+			background: -webkit-linear-gradient(left, #09c, #f66);
+		}
+	</style>
+</head>
+<body>
+	<h1>刮刮乐</h1>
+	<canvas id="canvas" width="500" height="350"></canvas>
+	<a id="cj">抽奖</a>
+	<script>
+		var canvas = document.getElementById('canvas');
+		var ctx = canvas.getContext('2d');
+		var btn = document.getElementById('cj');
+		// 随机函数
+		var rand = (function () {
+		    var today = new Date();
+		    var seed = today.getTime();
+		    function rnd() {
+		      seed = ( seed * 9301 + 49297 ) % 233280;
+		      return seed / (233280.0);
+		    }
+		    return function (number) {
+		      return Math.ceil(rnd(seed) * number);
+		    };
+		}());
+
+		canvas.flag = false;
+		canvas.addEventListener('mousedown', function (event) {
+			var x = event.clientX - canvas.offsetLeft;
+			var y = event.clientY - canvas.offsetTop;
+			ctx.save();
+			remove();
+			ctx.beginPath();
+			ctx.arc(x, y, 1, 0, Math.PI*2, true);
+			ctx.closePath();
+			ctx.fill();
+			ctx.restore();
+			canvas.flag = true;
+			canvas.addEventListener('mousemove', function (event) {
+				if (!canvas.flag) return;
+				var x2 = event.clientX - canvas.offsetLeft;
+				var y2 = event.clientY - canvas.offsetTop;
+				ctx.save();
+				remove();
+				ctx.moveTo(x, y);
+				ctx.lineTo(x2, y2);
+				ctx.stroke();
+				ctx.restore();
+				x = x2;
+				y = y2;
+			}, false);
+		}, false);
+
+		canvas.addEventListener('mouseup', function () {
+			canvas.flag = false;
+		}, false);
+		cj.addEventListener('click', function () {
+			init();
+		}, false);
+		function remove() {
+			ctx.globalCompositeOperation = "destination-out";
+			ctx.lineCap = 'round';
+			ctx.lineJoin = 'round';
+			ctx.lineWidth = 50;
+		}
+		function init() {
+			if (rand(10) !== 6) {
+				canvas.style.backgroundImage = 'url(http://thumbs.dreamstime.com/x/%D0%BB%D0%BB%B5%DD%D7%D6%B7%A8%B2%A2%C7%D2%C2%D2-%D4%AA-47651496.jpg)';
+			} else {
+				canvas.style.backgroundImage = 'url(http://i1.hdslb.com/video/d9/d9c8b20757178f561451a2edd3c25c43.jpg)';
+			}
+			draw();
+		}
+		function draw() {
+			// 遮罩层
+			drawMask();
+			// 遮罩层上面的点
+			drawPix();
+		}
+		function drawMask() {
+			ctx.save();
+			ctx.fillStyle = '#ccc';
+			ctx.fillRect(0, 0, 500, 350)
+			ctx.restore();
+		}
+		function drawPix() {
+			ctx.save();
+			ctx.fillStyle = '#09c';
+			for (var i=0; i<200; i++) {
+				ctx.save();
+				ctx.translate(Math.floor(Math.random()*350)+i, Math.floor(Math.random()*200+i));
+				ctx.beginPath();
+				ctx.arc(0, 0, 2, 0, Math.PI*2, true);
+				ctx.closePath();
+				ctx.fill();
+				ctx.restore();
+			}
+			ctx.restore();
+		}
+		init();
+
+		/*
+		移动端: 
+		var hastouch = "ontouchstart" in window?true:false,
+        tapstart = hastouch?"touchstart":"mousedown",
+        tapmove = hastouch?"touchmove":"mousemove",
+        tapend = hastouch?"touchend":"mouseup";
+		*/
+	</script>
+</body>
+</html>
