@@ -1,0 +1,188 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+html, body {
+	font-weight: bold;
+	height: 100%;
+	width: 100%;
+}
+/* 成绩组件 */
+.level {
+	text-align: center;
+	margin: 10px 0;
+}
+.score, .best {
+	display: inline-block;
+	padding: 5px 10px;
+	background-color: #BBADA0;
+	border-radius: 5px;
+}
+.score {
+	position: relative;
+}
+.add-score {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	opacity: 1;
+	transform: translate(-50%, -50%);
+	transition: all ease .6s;
+}
+.title {
+	font-size: 14px;
+	color: #EEE4D6;
+}
+.title, .number {
+	display: block;
+	text-align: center;
+	line-height: 1;
+}
+.number {
+	font-size: 18px;
+	color: #fff;
+}
+/* /成绩组件 */
+
+/* 新游戏 */
+.new-game {
+	display: block;
+	width: 100px;
+	font-size: 18px;
+	color: #F9F6F2;
+	background-color: #8F7A66;
+	text-align: center;
+	padding: 10px;
+	margin: 0 auto;
+	border-radius: 5px;
+}
+/* /新游戏 */
+
+/* 2048游戏 */
+.main {
+	background-color: #BBADA0;
+	box-sizing: border-box;
+	border-radius: 10px;
+	padding: 8px;
+	width: 94%;
+	margin: 0 auto;
+	margin-top: 8px;
+}
+.rows {
+	margin-bottom: 8px;
+	height: 60px;
+
+}
+.rows:last-child {
+	margin-bottom: 0;
+}
+.cols {
+	/*transition: all ease 0s .5s;*/
+	float: left;
+	border-radius: 5px;
+	width: 22%;
+	height: 100%;
+	line-height: 60px;
+	text-align: center;
+	color: #776E65;
+	font-size: 30px;
+	margin-right: 4%;
+	background-color: #CDC1B4;
+}
+.col-2 {
+	background-color: #EEE4DA;
+}
+.col-4 {
+	background-color: #EDE0C8
+}
+.col-8 {
+	background-color: #F2B179;
+	color: #fff;
+}
+.col-16 {
+	background-color: #F59563;
+	color: #fff;
+}
+.col-32 {
+	background-color: #F67C5F;
+	color: #fff;
+}
+.col-64 {
+	background-color: #F65E3B;
+	color: #fff;
+}
+.col-128 {
+	background-color: #EDCF72;
+	color: #fff;
+}
+.col-256 {
+	background-color: #edcc61;
+	color: #fff;
+	box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.31746), 
+		inset 0 0 0 1px rgba(255, 255, 255, 0.19048);
+}
+
+.cols:last-child {
+	margin-right: 0;
+}
+/* /2048游戏 */
+
+/* 关于作者 */
+.author {
+	float: right;
+	margin-right: 3%;
+	margin-top: 5px;
+	color: #666;
+	font-size: 10px;
+}
+/* /关于作者 */
+
+/* 游戏结束 */
+.end {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, .6);
+	z-index: 200;
+	opacity: 0;
+	display: none;
+}
+.end:after {
+	width: 90%;
+	background-color: #fff;
+	height: 50%;
+	content: '';
+	position: absolute;
+	top: 15px;
+	left: 5%;
+	z-index: -1;
+	border-radius: 15px;
+}
+.end h2 {
+	font-size: 26px;
+	font-weight: normal;
+	color: #f03;
+	text-align: center;
+	margin-top: 50px;
+}
+.end div {
+	text-align: center;
+	margin-top: 20px;
+	font-size: 35px;
+}
+.end .qued {
+	margin-top: 15px;
+	display: block;
+	width: 60px;
+	padding: 5px 10px;
+	background-color: #9cc;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	text-align: center;
+	border-radius: 5px;
+	color: #fff;
+}
+/* /游戏结束 */
