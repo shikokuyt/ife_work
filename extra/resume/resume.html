@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="简历, web, 皮蛋周">
+	<title>Resume</title>
+	<link rel="stylesheet" href="dist/css/resume.css">
+</head>
+<body>
+	<!-- 头部导航区 -->
+	<div class="header">
+		<div class="wrap">
+			<ul class="nav">
+				<li>
+					<a href="#about" data-href=".about">ABOUT</a>
+				</li>
+				<li>
+					<a href="#portfolio" data-href=".portfolio">WORK</a>
+				</li>
+				<li>
+					<a href="#contact" data-href=".contact">CONTACT</a>
+				</li>
+			</ul>
+			<div class="info">
+				<figure>
+					<img src="img/h_logo.png" alt="头部Logo">
+					<figcaption style="width: 65px" class="title">Hello</figcaption>
+				</figure>
+				<p class="name">
+				<span class="name" id="typed-name"></span>
+				</p>
+				<p class="words">
+				<span class="words" id="typed-words"></span>
+				</p>
+				<div class="links">
+					<a href="#" class="wb" title="微博"></a>
+					<a href="#" class="bk" title="博客"></a>
+					<a href="#" class="wx" title="微信"></a>
+				</div>
+			</div>
+			<div class="info-more">
+				Age: <span class="age">21</span>
+				Residence: <span class="residence">杭州</span>
+				Working at: <span class="work">null</span>
+			</div>
+		</div>
+	</div>
+	<!-- 关于我 -->
+	<div class="about">
+		<div class="wrap">
+			<div class="info">
+				<figure>
+					<img src="img/a_logo.png" alt="About Logo">
+					<figcaption class="title">
+						About
+					</figcaption>
+				</figure>
+				<p>Do you want to know me?</p>
+			</div>
+			<div class="myskill">
+				<div class="who">
+					<h3>WHO AM I?</h3>
+					<p class="tb-lr">
+						我叫周宇涛，来自杭州电子科技大学17届学生，是一名前端开发人员，从2015年年初接触到前端，已经有一年多的学习&amp;开发经历。<br><br>
+						似等了一百年忽已明白，即使再见面，成熟地表演，不如不见。
+					</p>
+					<div class="links">
+						<a href="#" class="wb" title="微博"></a>
+						<a href="#" class="bk" title="博客"></a>
+						<a href="#" class="wx" title="微信"></a>
+					</div>
+				</div>
+				<div class="skill">
+					<h3>MY SKILLS</h3>
+					<div class="coding">
+						<h4>Coding Programer</h4>
+						<ul>
+							<li>
+								<div class="how" data-value="90%">
+									<span class="name">HTML/HTML5</span>
+									<span class="progress">90%</span>
+								</div>
+							</li>
+							<li>
+								<div class="how" data-value="80%">
+									<span class="name">CSS/CSS3</span>
+									<span class="progress">80%</span>
+								</div>
+							</li>
+							<li>
+								<div class="how" data-value="65%">
+									<span class="name">JS/ES6</span>
+									<span class="progress">65%</span>
+								</div>
+							</li>
+							<li>
+								<div class="how" data-value="65%">
+									<span class="name">PHP</span>
+									<span class="progress">65%</span>
+								</div>
+							</li>
+							<li>
+								<div class="how" data-value="30%">
+									<span class="name">NODE.JS</span>
+									<span class="progress">30%</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="other">
+						<h4>Other</h4>
+						<ul>
+							<li>
+								<div class="how" data-value="70%">
+									<span class="name">Git</span>
+									<span class="progress">70%</span>
+								</div>
+							</li>
+							<li>
+								<div class="how" data-value="50%">
+									<span class="name">PS</span>
+									<span class="progress">50%</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="my">
+					<img src="img/avator.jpg" alt="周宇涛">
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 作品展览 -->
+	<div class="portfolio">
+		<div class="wrap">
+			<div class="info">
+				<figure>
+					<figcaption class="title">
+						PORTFOLIO
+					</figcaption>
+				</figure>
+				<p>Do you want to know me?</p>
+			</div>
+			<div class="works">
+				<div class="aside">
+				</div>
+				<div class="main">
+					<a href="#" class="prev">&lt;</a>
+					<a href="#" class="next">&gt;</a>
+					<ul id="word_list" class="sb-slider">
+					<li>
+						<a href="javascript: "><img src="img/hduxq.jpg" alt="杭州电子科技大学六十周年校庆"/></a>
+					</li>
+					<li>
+						<a href="javascript: "><img src="img/hziee.jpg" alt="杭州电子科技大学信息工程学院辅导员评价系统"/></a>
+					</li>
+					<li>
+						<a href="javascript: "><img src="img/2048.jpg" alt="2048"/></a>
+					</li>
+					<li>
+						<a href="javascript: "><img src="img/yun.jpg" alt="仿网易云课堂首页"/></a>
+					</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 联系方式 -->
+	<div class="weibo">
+		<div class="wrap">
+			<div class="info">
+				<figure>
+					<img src="img/w_logo.png" alt="Weibo Logo">
+					<p>"Change is the only constant."&nbsp;HERACLITUS <br><br><a target="_blank" href="http://weibo.com/u/3887488475/home?wvr=5">@shikokuyt</a></p>
+				</figure>
+				<!-- other links -->
+			</div>
+			<div class="control">
+				<a href="javascript:" class="prev"></a>
+				<a href="javascript:" class="next"></a>
+			</div>
+		</div>
+	</div>
+	<!-- 联系我 -->
+	<div class="contact">
+		<div class="wrap">
+			<div class="info">
+				<figure>
+					<figcaption class="title">
+						PORTFOLIO
+					</figcaption>
+				</figure>
+				<p>Recent blog writings</p>
+			</div>
+			<div class="to-me">
+				<div class="email">
+					369280416@qq.com
+				</div>
+				<div class="phone">
+					13750840862
+				</div>
+			</div>
+			<div class="form">
+				<div class="name-email">
+					<input id="name" placeholder="Your Name*" type="text">
+					<input id="email" placeholder="Your Email*" type="text">
+				</div>
+				<div class="msg">
+					<textarea id="msg" placeholder="Your Message*" maxlength="500"></textarea>
+				</div>
+				<div class="send">
+					<a href="javascript:" id="send">SEND MESSAGE</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 尾部 -->
+	<div class="footer">
+		<div class="wrap">
+		&copy; 2016 All Rights Reserved. Designed by <span class="author">周宇涛</span>
+		</div>
+	</div>
+	<!-- 返回顶部 -->
+	<div id="back_top" class="back-top"></div>
+	<!-- JQuery -->
+	<script src="js/jquery-3.0.0.min.js"></script>
+	<script src="js/modernizr.custom.46884.js"></script>
+	<script src="js/jquery.slicebox.js"></script>
+	<!-- Template -->
+	<script src="js/tppl.js"></script>
+	<script type="text/html" id="work">
+		<div class="p-name pb">
+			<p>PROJECT NAME:</p>
+			<h3 id="p_name">[:=name:]</h3>
+		</div>
+		<div class="pb p-describe">
+			<p>PROJECT DESCRIPTION:</p>
+			<ul>
+				[: for(var i=0, len=description.length; i<len; i++) { :]
+					<li>[:= description[i] :]
+				[: } :]
+			</ul>
+			<p class="detail">
+				[:= detail :]
+			</p>
+		</div>
+		<div class="pb p-site">
+			<p>PROJECT WEB SITE, OR ADDRESS:</p>
+			<ul>
+				<li><a href="[:= address:]">[:= address :]</a></li>
+			</ul>
+		</div>
+		<div class="p-tags">
+			<p>TAGS:</p>
+			<p class="detail">[:= tags.join(", ") :]</p>
+		</div>
+	</script>
+	<!-- Template data -->
+	<script src="js/project.js"></script>
+	<!-- typed -->
+	<script src="js/typed.min.js"></script>
+	<!-- User -->
+	<script src="js/resume.js"></script>
+</body>
+</html>
