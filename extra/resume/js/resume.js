@@ -33,7 +33,7 @@ function runOnce(method, context) {
 			$('html, body').animate({
 				scrollTop: $(href).offset().top
 				},
-				600;
+				600);
 	});
 
 	/*
